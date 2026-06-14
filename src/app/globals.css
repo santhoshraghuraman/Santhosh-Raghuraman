@@ -54,6 +54,10 @@ html {
   background: var(--bg);
 }
 
+html.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
 body {
   background: var(--bg);
   color: var(--text-primary);
@@ -543,6 +547,7 @@ p {
   justify-content: center;
   z-index: 2;
   animation: slow-float 7s ease-in-out infinite alternate;
+  will-change: transform;
 }
 
 .profile-image-container {
@@ -609,6 +614,7 @@ p {
   animation: rotate-clockwise 35s linear infinite; /* Slowed down clockwise */
   opacity: 0.85;
   filter: drop-shadow(0 0 10px rgba(37, 99, 235, 0.3));
+  will-change: transform;
 }
 
 .ring-second {
@@ -624,6 +630,7 @@ p {
   pointer-events: none;
   animation: rotate-counter-clockwise 25s linear infinite; /* Slowed down counter-clockwise */
   opacity: 0.65;
+  will-change: transform;
 }
 
 @keyframes rotate-clockwise {
@@ -836,10 +843,12 @@ p {
 /* Card Float Animations */
 .float-slow {
   animation: float-badge-key 6s ease-in-out infinite alternate;
+  will-change: transform;
 }
 
 .float-delayed {
   animation: float-credibility-key 6.5s ease-in-out infinite alternate-reverse;
+  will-change: transform;
 }
 
 @keyframes float-badge-key {
@@ -2025,7 +2034,9 @@ p {
   .hero-ctas { 
     justify-content: center; 
   }
-  .hero-socials-row {
+  .hero-social-dock {
+    margin-left: auto;
+    margin-right: auto;
     justify-content: center;
   }
   .hero-visual {
@@ -2097,6 +2108,7 @@ p {
   }
   .projects-grid { 
     grid-template-columns: 1fr; 
+    gap: 1.5rem; /* Optimized spacing for mobile */
   }
   .services-grid { 
     grid-template-columns: 1fr; 
@@ -2654,10 +2666,21 @@ p {
     min-height: auto !important;
     padding: 2.5rem 0 1rem;
   }
+  .profile-floating-wrapper {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
   .profile-image-container {
     width: 270px;
     height: 270px;
     border-width: 7px;
+  }
+  .ring-outer {
+    filter: none !important; /* Disable heavy paint shadow on mobile */
+  }
+  .profile-glow-bg {
+    filter: none !important; /* Disable heavy blur paint on mobile */
+    background: radial-gradient(circle, rgba(37, 99, 235, 0.08) 0%, transparent 70%) !important;
   }
   .floating-badge-card {
     position: absolute;
@@ -2666,19 +2689,20 @@ p {
     top: -25px;
     right: auto !important;
     white-space: nowrap;
+    animation: float-badge-mobile-key 6s ease-in-out infinite alternate !important; /* Centered mobile animation */
   }
   .credibility-showcase-card {
     position: relative;
     right: auto !important;
     bottom: auto !important;
-    margin-top: 2rem;
+    margin-top: 2.5rem;
     width: 100%;
     max-width: 340px;
     border-right: none;
     border-bottom: 3px solid var(--secondary);
   }
   .capabilities-glass-card {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     width: 100%;
     max-width: 340px;
   }
@@ -2692,7 +2716,7 @@ p {
   }
   .floating-badge-card {
     top: -20px;
-    scale: 0.95;
+    animation: float-badge-mobile-480-key 6s ease-in-out infinite alternate !important;
   }
   .credibility-showcase-card {
     max-width: 280px;
@@ -2706,4 +2730,15 @@ p {
   .hero-title {
     font-size: clamp(1.85rem, 7vw, 2.35rem) !important;
   }
+}
+
+/* Centered float animations to prevent override of translateX(-50%) on mobile viewports */
+@keyframes float-badge-mobile-key {
+  0% { transform: translateX(-50%) translateY(0); }
+  100% { transform: translateX(-50%) translateY(-8px); }
+}
+
+@keyframes float-badge-mobile-480-key {
+  0% { transform: translateX(-50%) scale(0.95) translateY(0); }
+  100% { transform: translateX(-50%) scale(0.95) translateY(-8px); }
 }

@@ -8,6 +8,8 @@ export default function InteractiveCard({ children }) {
   const cardRef = useRef(null);
 
   const handleMouseMove = (e) => {
+    // Disable on touch devices for scrolling performance
+    if (typeof window !== "undefined" && ("ontouchstart" in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0)) return;
     if (!cardRef.current) return;
     const card = cardRef.current;
     const rect = card.getBoundingClientRect();
@@ -30,10 +32,13 @@ export default function InteractiveCard({ children }) {
   };
 
   const handleMouseEnter = () => {
+    // Disable on touch devices to avoid sticky hover states
+    if (typeof window !== "undefined" && ("ontouchstart" in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0)) return;
     setIsHovered(true);
   };
 
   const handleMouseLeave = () => {
+    if (typeof window !== "undefined" && ("ontouchstart" in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0)) return;
     setIsHovered(false);
     setCoords({ rotateX: 0, rotateY: 0, glossX: 50, glossY: 50 });
   };

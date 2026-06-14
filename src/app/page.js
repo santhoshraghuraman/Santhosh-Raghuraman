@@ -316,6 +316,10 @@ export default function Home() {
 
   useEffect(() => {
     const handleMouseMove = (e) => {
+      // Return early on touch devices to avoid page-level re-render loops on mobile swipe/scrolling
+      if (typeof window !== "undefined" && ("ontouchstart" in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0)) {
+        return;
+      }
       const x = (e.clientX / window.innerWidth) * 2 - 1;
       const y = -(e.clientY / window.innerHeight) * 2 + 1;
       setMousePos({ x, y });
@@ -468,13 +472,6 @@ export default function Home() {
                 <div className="hero-visual-content">
                   
                   <div className="profile-floating-wrapper">
-                    {/* Glowing background */}
-                    <div className="profile-glow-bg" />
-                    
-                    {/* Animated rotating rings */}
-                    <div className="ring-outer" />
-                    <div className="ring-second" />
-                    
                     {/* Premium circular profile image with mouse tilt */}
                     <div 
                       className="profile-image-container"
@@ -483,6 +480,13 @@ export default function Home() {
                         transition: "transform 0.4s cubic-bezier(0.1, 0.8, 0.2, 1)"
                       }}
                     >
+                      {/* Glowing background - nested to stay centered */}
+                      <div className="profile-glow-bg" />
+                      
+                      {/* Animated rotating rings - nested to prevent mobile oval distortion */}
+                      <div className="ring-outer" />
+                      <div className="ring-second" />
+
                       <div className="profile-avatar-wrapper">
                         <Image src="/profile.png" alt="Santhosh R — AI & Full Stack Developer" width={360} height={360} priority />
                       </div>
