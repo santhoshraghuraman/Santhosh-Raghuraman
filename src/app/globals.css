@@ -2646,13 +2646,23 @@ p {
   .project-info {
     padding: 1.5rem;
   }
+  .spotlight-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
   .spotlight-info {
     padding: 2rem 1.5rem;
-    min-width: 0;
+    min-width: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
   }
   .project-ctas {
-    flex-wrap: wrap;
-    gap: 0.5rem;
+    flex-wrap: wrap !important;
+    gap: 0.5rem !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
   }
   .highlight-card {
     grid-template-columns: 1fr;
