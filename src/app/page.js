@@ -373,6 +373,19 @@ export default function Home() {
               </a>
             </li>
           </ul>
+
+          {/* Mobile CTA (Visible only on mobile/tablet) */}
+          <div className="nav-mobile-cta">
+            <a 
+              href={WHATSAPP_CONSULTATION_URL} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="btn btn-primary btn-sm"
+              id="btn-nav-call-mobile"
+            >
+              Consult
+            </a>
+          </div>
         </div>
       </header>
 
