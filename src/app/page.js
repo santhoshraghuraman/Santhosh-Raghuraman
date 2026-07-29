@@ -448,7 +448,7 @@ export default function Home() {
                     <LinkedinIcon size={16} /> <span>LinkedIn</span>
                   </a>
                   <div className="hero-dock-divider" />
-                  <a href="https://drive.google.com/file/d/1AhgVqeseo3t0E9EiUEFDuETfuznnLZdd/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="hero-dock-item" id="hero-dock-resume">
+                  <a href="https://drive.google.com/file/d/1_Mc-iZkYrEUsDXYudqBRB_IAghPlFGqY/view" target="_blank" rel="noopener noreferrer" className="hero-dock-item" id="hero-dock-resume">
                     <FileText size={16} /> <span>Resume</span>
                   </a>
                   <div className="hero-dock-divider" />
@@ -488,7 +488,7 @@ export default function Home() {
                       <div className="ring-second" />
 
                       <div className="profile-avatar-wrapper">
-                        <Image src="/profile.png" alt="Santhosh R — AI & Full Stack Developer" width={360} height={360} priority />
+                        <Image src="/1.png" alt="Santhosh R — AI & Full Stack Developer" width={360} height={360} priority />
                       </div>
                     </div>
 
@@ -1156,7 +1156,7 @@ export default function Home() {
                   <a href="https://www.linkedin.com/in/santhosh-0407rv/" target="_blank" rel="noopener noreferrer" className="contact-social-link" id="contact-social-linkedin">
                     <LinkedinIcon size={16} /> LinkedIn
                   </a>
-                  <a href="https://drive.google.com/file/d/1AhgVqeseo3t0E9EiUEFDuETfuznnLZdd/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="contact-social-link" id="contact-social-resume">
+                  <a href="https://drive.google.com/file/d/1_Mc-iZkYrEUsDXYudqBRB_IAghPlFGqY/view" target="_blank" rel="noopener noreferrer" className="contact-social-link" id="contact-social-resume">
                     <FileText size={16} /> Resume
                   </a>
                 </div>
@@ -1210,7 +1210,7 @@ export default function Home() {
                   </a>
                 </li>
                 <li>
-                  <a href="https://drive.google.com/file/d/1AhgVqeseo3t0E9EiUEFDuETfuznnLZdd/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                  <a href="https://drive.google.com/file/d/1_Mc-iZkYrEUsDXYudqBRB_IAghPlFGqY/view" target="_blank" rel="noopener noreferrer">
                     <FileText size={14} /> Resume
                   </a>
                 </li>
@@ -1243,7 +1243,7 @@ export default function Home() {
             "@type": "Person",
             "name": "Santhosh R",
             "url": "https://santhosh-portfolio.vercel.app",
-            "image": "https://santhosh-portfolio.vercel.app/profile.png",
+            "image": "https://santhosh-portfolio.vercel.app/1.png",
             "jobTitle": "AI & Full Stack Developer",
             "description": "Santhosh R is a professional AI & Full Stack Developer building modern websites, scalable applications, and automation solutions.",
             "sameAs": [

@@ -588,15 +588,10 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 15%; /* Professional portrait crop */
+  object-position: center 15%;
   display: block;
   transform: scale(1.05);
-  filter: grayscale(100%) contrast(1.08); /* Professional black & white version */
   transition: all 0.35s var(--ease-spring);
-}
-
-.profile-avatar-wrapper:hover img {
-  filter: grayscale(0%) contrast(1.0); /* Hover reveals color */
 }
 
 /* Premium Rotating Rings (Apple / Stripe aesthetic) */

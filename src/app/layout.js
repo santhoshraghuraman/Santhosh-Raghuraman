@@ -32,7 +32,7 @@ export const metadata = {
     siteName: "Santhosh R Portfolio",
     images: [
       {
-        url: "/profile.png",
+        url: "/1.png",
         width: 800,
         height: 800,
         alt: "Santhosh R — AI & Full Stack Developer",
@@ -46,7 +46,7 @@ export const metadata = {
     title: "Santhosh R | AI & Full Stack Developer | Business Website Specialist",
     description:
       "Santhosh R is a professional AI & Full Stack Developer helping businesses, startups, and entrepreneurs build modern websites, scalable web applications, and intelligent automation systems.",
-    images: ["/profile.png"],
+    images: ["/1.png"],
   },
   robots: {
     index: true,
