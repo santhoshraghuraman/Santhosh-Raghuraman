@@ -20,7 +20,7 @@ export const metadata = {
   keywords:
     "Santhosh R, AI Developer, Full Stack Developer, Business Website Specialist, Web Application Developer, Automation Solutions Builder, Technology Consultant, Next.js, React, FastAPI, Node.js",
   authors: [{ name: "Santhosh R" }],
-  metadataBase: new URL("https://santhosh-portfolio.vercel.app"),
+  metadataBase: new URL("https://santhosh-portfolio-gamma.vercel.app"),
   alternates: {
     canonical: "/",
   },
@@ -28,7 +28,7 @@ export const metadata = {
     title: "Santhosh R | AI & Full Stack Developer | Business Website Specialist",
     description:
       "Santhosh R is a professional AI & Full Stack Developer helping businesses, startups, and entrepreneurs build modern websites, scalable web applications, and intelligent automation systems.",
-    url: "https://santhosh-portfolio.vercel.app",
+    url: "https://santhosh-portfolio-gamma.vercel.app",
     siteName: "Santhosh R Portfolio",
     images: [
       {

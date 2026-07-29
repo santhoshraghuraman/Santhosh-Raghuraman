@@ -1242,8 +1242,8 @@ export default function Home() {
             "@context": "https://schema.org",
             "@type": "Person",
             "name": "Santhosh R",
-            "url": "https://santhosh-portfolio.vercel.app",
-            "image": "https://santhosh-portfolio.vercel.app/1.png",
+            "url": "https://santhosh-portfolio-gamma.vercel.app",
+            "image": "https://santhosh-portfolio-gamma.vercel.app/1.png",
             "jobTitle": "AI & Full Stack Developer",
             "description": "Santhosh R is a professional AI & Full Stack Developer building modern websites, scalable applications, and automation solutions.",
             "sameAs": [
